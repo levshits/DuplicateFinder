@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition.Hosting;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.Composition.Hosting;
 using System.Windows;
 using Microsoft.Practices.Prism.MefExtensions;
 using Microsoft.Practices.Prism.Modularity;
@@ -19,9 +14,7 @@ namespace DuplicateFinder
         }
         protected override IModuleCatalog CreateModuleCatalog()
         {
-            return
-                Microsoft.Practices.Prism.Modularity.ModuleCatalog.CreateFromXaml(new Uri("catalog.xaml",
-                    UriKind.Relative));
+            return new ConfigurationModuleCatalog();
         }
 
         protected override DependencyObject CreateShell()
