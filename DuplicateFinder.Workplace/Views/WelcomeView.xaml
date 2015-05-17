@@ -23,13 +23,15 @@
                            Margin="10, 10"/>
             <StackPanel Margin="10,10" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Content="{Binding .[Workplace.Simple], Mode=OneWay, FallbackValue=Simple, Source={StaticResource Localisation}}"
-                            Margin="10,10"
-                            Width="120"
-                            FontSize="17"/>
-                <Button Content="{Binding .[Workplace.Advance], Mode=OneWay, FallbackValue=Advance, Source={StaticResource Localisation}}" 
-                            Margin="10,10"
-                            Width="120"
-                            FontSize="17"/>
+                        Margin="10,10"
+                        Width="120"
+                        FontSize="17"
+                        Command="{Binding NavigateToSimpleViewCommand}"/>
+                <Button Content="{Binding .[Workplace.Advanced], Mode=OneWay, FallbackValue=Advanced, Source={StaticResource Localisation}}" 
+                        Margin="10,10"
+                        Width="120"
+                        FontSize="17"
+                        Command="{Binding NavigateToAdvancedViewCommand}"/>
             </StackPanel>
         </StackPanel>
     </Grid>

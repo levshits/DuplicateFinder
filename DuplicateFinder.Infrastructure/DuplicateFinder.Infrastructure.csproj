@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDuplicateSearchService.cs" />
     <Compile Include="IWpfThemesProvider.cs" />
     <Compile Include="RegionNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

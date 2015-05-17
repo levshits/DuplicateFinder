@@ -12,10 +12,8 @@ namespace DuplicateFinder.MainMenu
     [ModuleExport(typeof(MainMenuModule))]
     public class MainMenuModule: IModule
     {
-        [Import] 
-        private IRegionManager regionManager;
-        [Import]
-        private ILocalizationService localizationService;
+        [Import] private IRegionManager regionManager;
+        [Import] private ILocalizationService localizationService;
 
         public void Initialize()
         {

@@ -12,10 +12,8 @@ namespace DuplicateFinder.Workplace
     [ModuleExport(typeof(WorkplaceModule))]
     public class WorkplaceModule:IModule
     {
-        [Import]
-        private ILocalizationService localizationService;
-        [Import] 
-        private IRegionManager regionManager;
+        [Import] private ILocalizationService localizationService;
+        [Import] private IRegionManager regionManager;
         public void Initialize()
         {
             localizationService.RegisterManager("Workplace", Resource.ResourceManager);

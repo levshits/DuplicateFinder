@@ -126,7 +126,7 @@
   <data name="Simple" xml:space="preserve">
     <value>Обычный</value>
   </data>
-  <data name="Advance" xml:space="preserve">
+  <data name="Advanced" xml:space="preserve">
     <value>Продвинутый</value>
   </data>
 </root>

@@ -61,11 +61,11 @@ namespace DuplicateFinder.Workplace.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Advance.
+        ///   Looks up a localized string similar to Advanced.
         /// </summary>
-        internal static string Advance {
+        internal static string Advanced {
             get {
-                return ResourceManager.GetString("Advance", resourceCulture);
+                return ResourceManager.GetString("Advanced", resourceCulture);
             }
         }
         

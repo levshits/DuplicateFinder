@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="DuplicateFinder.AdvancedMode.Views.AdvancedModeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:helpers="clr-namespace:LocalizationCommons.Helpers;assembly=LocalizationCommons"
+             mc:Ignorable="d" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <UserControl.Resources>
+        <helpers:LocalizationHelper x:Key="Localization"/>
+    </UserControl.Resources>
+    <Grid Height="Auto" Width="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="150"/>
+            <ColumnDefinition MinWidth="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*" MinHeight="100"/>
+            <RowDefinition Height="21*" MinHeight="101"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="{Binding .[AdvancedMode.Directories], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=Directories}" Margin="10,4,4,0" MinHeight="100">
+            <Grid Margin="0">
+                <ListBox Margin="0,31.293,0,0" ItemsSource="{Binding Directories}" SelectedItem="{Binding CurrentDirectory, Mode=OneWayToSource}"/>
+                <StackPanel Orientation="Horizontal" Height="26.293" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">
+                    <Button Command="{Binding AddDirectoryCommand}" 
+                        Content="{Binding .[AdvancedMode.Add], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=Add}" 
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" />
+                    <Button Command="{Binding RemoveDirectoryCommand}" Content="{Binding .[AdvancedMode.Remove], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=Remove}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{Binding .[AdvancedMode.FileExtensions], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=FileExtensions}" Margin="1.302,4,10,0" Grid.Column="1" MinHeight="100">
+            <Grid Margin="0">
+                <ListBox Margin="0,52.92,0,0" ItemsSource="{Binding Extensions}" SelectedItem="{Binding SelectedExtension}"/>
+                <StackPanel Orientation="Horizontal" Height="24.96" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">
+                    <Button Command="{Binding AddExtensionCommand}" Content="{Binding .[AdvancedMode.Add], FallbackValue=Add, Mode=OneWay, Source={StaticResource Localization}}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+                    <Button Command="{Binding RemoveExtensionCommand}" Content="{Binding .[AdvancedMode.Remove], FallbackValue=Remove, Mode=OneWay, Source={StaticResource Localization}}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+                </StackPanel>
+                <TextBox Margin="0,29.96,0,0" VerticalAlignment="Top" Text="{Binding Extension}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{Binding .[AdvancedMode.FileSize], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=FileSize}" Margin="10,10,4,0" Grid.Row="1" MinHeight="100">
+            <Grid Margin="0">
+                <TextBlock HorizontalAlignment="Left" Margin="10,4.04,0,0" TextWrapping="Wrap" 
+                           Text="{Binding .[AdvancedMode.Min], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=Min}" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,48,0,0" TextWrapping="Wrap" 
+                           Text="{Binding .[AdvancedMode.Max], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=Max}" VerticalAlignment="Top"/>
+                <StackPanel Margin="10,20,0,44.92" Orientation="Horizontal">
+                	<TextBox Height="23" TextWrapping="Wrap" Text="{Binding MinSize}" VerticalAlignment="Top" Width="92" Margin="0,-0.52,0,0"/>
+                	<ComboBox ItemsSource="{Binding SizeMeasures}" SelectedIndex="{Binding MinSizeMeasure}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="53" Height="23" Margin="0,-0.52,0,0"/>
+                </StackPanel>
+                <StackPanel Margin="10,63.96,0,2" Orientation="Horizontal">
+                	<TextBox TextWrapping="Wrap" Text="{Binding MaxSize}" Height="21.96" VerticalAlignment="Top" Width="92"/>
+                	<ComboBox ItemsSource="{Binding SizeMeasures}" SelectedIndex="{Binding MinSizeMeasure}" 
+                		HorizontalAlignment="Right" VerticalAlignment="Top" Width="53"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{Binding .[AdvancedMode.ComparationAlgorithm], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=ComparationAlgorithm}" Margin="1.302,10,10,0" Grid.Column="1" Grid.Row="1" MinHeight="110">
+            <Grid Margin="0" d:IsLocked="True">
+                <RadioButton Content="SHA256" HorizontalAlignment="Left" Margin="19.697,13.08,0,0" VerticalAlignment="Top"/>
+                <RadioButton Content="SHA512" HorizontalAlignment="Left" Margin="19.697,33.04,0,0" VerticalAlignment="Top"/>
+                <RadioButton Content="MD5" HorizontalAlignment="Left" Margin="19.697,53,0,0" VerticalAlignment="Top"/>
+                <RadioButton Content="ByteToByte" HorizontalAlignment="Left" Margin="19.697,72.96,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="{Binding .[AdvancedMode.Start], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=Start}" Margin="0,5,10,0" Grid.Row="2" HorizontalAlignment="Right" Width="74.4" FontSize="13.333" Height="21.733" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Command="{Binding GoHomeCommand}" Content="{Binding .[AdvancedMode.GoHome], Source={StaticResource Localization}, Mode=OneWay, FallbackValue=GoHome}" HorizontalAlignment="Left" Margin="10,6.04,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" FontSize="13.333"/>
+    </Grid>
+</UserControl>

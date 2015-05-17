@@ -4,10 +4,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder", "DuplicateFinder\DuplicateFinder.csproj", "{3093AD58-DEBC-4ED2-98D6-FA2BCE077A77}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23BE18AA-C185-4826-B577-60F90AC4A684} = {23BE18AA-C185-4826-B577-60F90AC4A684}
+		{94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16} = {94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.Infrastructure", "DuplicateFinder.Infrastructure\DuplicateFinder.Infrastructure.csproj", "{94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.MainMenuModule", "DuplicateFinder.MainMenuModule\DuplicateFinder.MainMenuModule.csproj", "{787AF750-723D-41CA-BD12-110C6AC6EBC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.MainMenu", "DuplicateFinder.MainMenuModule\DuplicateFinder.MainMenu.csproj", "{787AF750-723D-41CA-BD12-110C6AC6EBC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationCommons", "LocalizationInterfaces\LocalizationCommons.csproj", "{23BE18AA-C185-4826-B577-60F90AC4A684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "LocalizationModule\Localization.csproj", "{11C0ED29-6B41-4DBF-BD2B-D6856638F605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfThemesProvider", "WpfThemesProvider\WpfThemesProvider.csproj", "{05FAD1F6-5227-4B4F-B1BE-19B834222DD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{130DAD20-C4A1-47C4-90F6-1FE38218DCBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default", "Themes\Default\Default.csproj", "{01178135-B745-48C8-8A9D-9208CE7E34B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple", "Themes\Simple\Simple.csproj", "{E0258467-7FAA-40E5-B99B-52A9546DCDCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Themes\Vista\Vista.csproj", "{5846421B-0C24-49F8-B2E8-9A6CE0C5D333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.Workplace", "DuplicateFinder.Workplace\DuplicateFinder.Workplace.csproj", "{DC381A43-5E70-44F5-AE71-9CE09C720CDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.AdvancedMode", "DuplicateFinder.AdvancedMode\DuplicateFinder.AdvancedMode.csproj", "{33500DD3-68E5-42C9-88F0-FEF1EB7ECE0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.SimpleMode", "DuplicateFinder.SimpleMode\DuplicateFinder.SimpleMode.csproj", "{EDA900D0-3F7C-41C1-8A53-24D8CE3E2B19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.DuplicateSearch", "DuplicateFinder.DuplicateSearch\DuplicateFinder.DuplicateSearch.csproj", "{B7F54880-56C7-43AA-AD95-486F7DB8EE78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +53,53 @@ Global
 		{787AF750-723D-41CA-BD12-110C6AC6EBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{787AF750-723D-41CA-BD12-110C6AC6EBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{787AF750-723D-41CA-BD12-110C6AC6EBC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BE18AA-C185-4826-B577-60F90AC4A684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BE18AA-C185-4826-B577-60F90AC4A684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BE18AA-C185-4826-B577-60F90AC4A684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BE18AA-C185-4826-B577-60F90AC4A684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C0ED29-6B41-4DBF-BD2B-D6856638F605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C0ED29-6B41-4DBF-BD2B-D6856638F605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C0ED29-6B41-4DBF-BD2B-D6856638F605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C0ED29-6B41-4DBF-BD2B-D6856638F605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FAD1F6-5227-4B4F-B1BE-19B834222DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FAD1F6-5227-4B4F-B1BE-19B834222DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FAD1F6-5227-4B4F-B1BE-19B834222DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FAD1F6-5227-4B4F-B1BE-19B834222DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01178135-B745-48C8-8A9D-9208CE7E34B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01178135-B745-48C8-8A9D-9208CE7E34B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01178135-B745-48C8-8A9D-9208CE7E34B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01178135-B745-48C8-8A9D-9208CE7E34B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0258467-7FAA-40E5-B99B-52A9546DCDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0258467-7FAA-40E5-B99B-52A9546DCDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0258467-7FAA-40E5-B99B-52A9546DCDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0258467-7FAA-40E5-B99B-52A9546DCDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5846421B-0C24-49F8-B2E8-9A6CE0C5D333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5846421B-0C24-49F8-B2E8-9A6CE0C5D333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5846421B-0C24-49F8-B2E8-9A6CE0C5D333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5846421B-0C24-49F8-B2E8-9A6CE0C5D333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC381A43-5E70-44F5-AE71-9CE09C720CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC381A43-5E70-44F5-AE71-9CE09C720CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC381A43-5E70-44F5-AE71-9CE09C720CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC381A43-5E70-44F5-AE71-9CE09C720CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33500DD3-68E5-42C9-88F0-FEF1EB7ECE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33500DD3-68E5-42C9-88F0-FEF1EB7ECE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33500DD3-68E5-42C9-88F0-FEF1EB7ECE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33500DD3-68E5-42C9-88F0-FEF1EB7ECE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA900D0-3F7C-41C1-8A53-24D8CE3E2B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA900D0-3F7C-41C1-8A53-24D8CE3E2B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA900D0-3F7C-41C1-8A53-24D8CE3E2B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA900D0-3F7C-41C1-8A53-24D8CE3E2B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F54880-56C7-43AA-AD95-486F7DB8EE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F54880-56C7-43AA-AD95-486F7DB8EE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F54880-56C7-43AA-AD95-486F7DB8EE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F54880-56C7-43AA-AD95-486F7DB8EE78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01178135-B745-48C8-8A9D-9208CE7E34B7} = {130DAD20-C4A1-47C4-90F6-1FE38218DCBF}
+		{E0258467-7FAA-40E5-B99B-52A9546DCDCC} = {130DAD20-C4A1-47C4-90F6-1FE38218DCBF}
+		{5846421B-0C24-49F8-B2E8-9A6CE0C5D333} = {130DAD20-C4A1-47C4-90F6-1FE38218DCBF}
 	EndGlobalSection
 EndGlobal

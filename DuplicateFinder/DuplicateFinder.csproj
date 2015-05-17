@@ -132,6 +132,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DuplicateFinder.AdvancedMode\DuplicateFinder.AdvancedMode.csproj">
+      <Project>{33500dd3-68e5-42c9-88f0-fef1eb7ece0f}</Project>
+      <Name>DuplicateFinder.AdvancedMode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DuplicateFinder.DuplicateSearch\DuplicateFinder.DuplicateSearch.csproj">
+      <Project>{b7f54880-56c7-43aa-ad95-486f7db8ee78}</Project>
+      <Name>DuplicateFinder.DuplicateSearch</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DuplicateFinder.Infrastructure\DuplicateFinder.Infrastructure.csproj">
       <Project>{94af27cb-0905-4ea0-9f0f-7cef00b8cd16}</Project>
       <Name>DuplicateFinder.Infrastructure</Name>
@@ -139,6 +147,10 @@
     <ProjectReference Include="..\DuplicateFinder.MainMenuModule\DuplicateFinder.MainMenu.csproj">
       <Project>{787af750-723d-41ca-bd12-110c6ac6ebc3}</Project>
       <Name>DuplicateFinder.MainMenu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DuplicateFinder.SimpleMode\DuplicateFinder.SimpleMode.csproj">
+      <Project>{eda900d0-3f7c-41c1-8a53-24d8ce3e2b19}</Project>
+      <Name>DuplicateFinder.SimpleMode</Name>
     </ProjectReference>
     <ProjectReference Include="..\DuplicateFinder.Workplace\DuplicateFinder.Workplace.csproj">
       <Project>{dc381a43-5e70-44f5-ae71-9ce09c720cdb}</Project>

@@ -126,7 +126,7 @@
   <data name="Simple" xml:space="preserve">
     <value>Simple</value>
   </data>
-  <data name="Advance" xml:space="preserve">
-    <value>Advance</value>
+  <data name="Advanced" xml:space="preserve">
+    <value>Advanced</value>
   </data>
 </root>
