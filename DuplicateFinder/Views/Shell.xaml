@@ -1,0 +1,13 @@
+﻿<Window x:Class="DuplicateFinder.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:regions="http://www.codeplex.com/CompositeWPF"
+        Title="Shell" Height="350" Width="525" MinWidth="300" SizeToContent="Width">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <ContentControl Height="30" regions:RegionManager.RegionName="MainMenuRegion"/>
+            <ContentControl Height="Auto" VerticalAlignment="Center" regions:RegionManager.RegionName="WorplaceRegion"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

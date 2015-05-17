@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder", "DuplicateFinder\DuplicateFinder.csproj", "{3093AD58-DEBC-4ED2-98D6-FA2BCE077A77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.Infrastructure", "DuplicateFinder.Infrastructure\DuplicateFinder.Infrastructure.csproj", "{94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateFinder.MainMenuModule", "DuplicateFinder.MainMenuModule\DuplicateFinder.MainMenuModule.csproj", "{787AF750-723D-41CA-BD12-110C6AC6EBC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3093AD58-DEBC-4ED2-98D6-FA2BCE077A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3093AD58-DEBC-4ED2-98D6-FA2BCE077A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3093AD58-DEBC-4ED2-98D6-FA2BCE077A77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AF27CB-0905-4EA0-9F0F-7CEF00B8CD16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{787AF750-723D-41CA-BD12-110C6AC6EBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787AF750-723D-41CA-BD12-110C6AC6EBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787AF750-723D-41CA-BD12-110C6AC6EBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787AF750-723D-41CA-BD12-110C6AC6EBC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
