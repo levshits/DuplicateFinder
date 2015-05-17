@@ -6,7 +6,7 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <ContentControl Height="30" regions:RegionManager.RegionName="MainMenuRegion"/>
-            <ContentControl Height="Auto" VerticalAlignment="Center" regions:RegionManager.RegionName="WorplaceRegion"/>
+            <ContentControl Height="Auto" VerticalAlignment="Center" regions:RegionManager.RegionName="WorkplaceRegion"/>
         </StackPanel>
         
     </Grid>

@@ -32,15 +32,21 @@ namespace WpfThemesProvider.Services
             themes.Clear();
             themeAssemblies.Clear();
             DirectoryInfo di = new DirectoryInfo("Themes");
-            foreach (FileInfo fi in di.GetFiles())
+            if (di.Exists)
             {
-                try
+                foreach (FileInfo fi in di.GetFiles())
                 {
-                    themeAssemblies.Add(Assembly.LoadFile(fi.FullName));
+                    try
+                    {
+                        themeAssemblies.Add(Assembly.LoadFile(fi.FullName));
+                    }
+                    catch
+                    {
+                        //Ignore all errors
+                    }
                 }
-                catch { }
+                themes.AddRange(themeAssemblies.Select(element => element.GetName().Name));
             }
-            themes.AddRange(themeAssemblies.Select(element => element.GetName().Name));
         }
         public void ApplyTheme(string name)
         {

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 using System.Windows.Controls;
+using DuplicateFinder.MainMenu.ViewModels;
 
 namespace DuplicateFinder.MainMenu.Views
 {
@@ -9,6 +10,13 @@ namespace DuplicateFinder.MainMenu.Views
         public MainMenuView()
         {
             InitializeComponent();
+        }
+
+        [Import]
+        public MainMenuViewModel ViewModel
+        {
+            get { return (MainMenuViewModel) this.DataContext; }
+            set { DataContext = value; }
         }
     }
 }

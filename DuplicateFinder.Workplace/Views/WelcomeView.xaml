@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="DuplicateFinder.Workplace.Views.WelcomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:helpers="clr-namespace:LocalizationCommons.Helpers;assembly=LocalizationCommons"
+             mc:Ignorable="d" 
+             Height="Auto" VerticalAlignment="Stretch">
+    <UserControl.Resources>
+        <helpers:LocalizationHelper x:Key="Localisation"/>
+    </UserControl.Resources>
+    <Grid VerticalAlignment="Stretch">
+        <StackPanel Margin="0,0,0,47" VerticalAlignment="Center" >
+            <TextBlock Text="{Binding .[Workplace.WelcomeString], FallbackValue=Welcome, Mode=OneWay, Source={StaticResource Localisation}}" 
+                           FontSize="30" 
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="10,10"/>
+            <TextBlock Text="{Binding .[Workplace.ChooseWorkMode], FallbackValue=PleaseChooseWorkMode, Source={StaticResource Localisation}}" 
+                           FontSize="17"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="10, 10"/>
+            <StackPanel Margin="10,10" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="{Binding .[Workplace.Simple], Mode=OneWay, FallbackValue=Simple, Source={StaticResource Localisation}}"
+                            Margin="10,10"
+                            Width="120"
+                            FontSize="17"/>
+                <Button Content="{Binding .[Workplace.Advance], Mode=OneWay, FallbackValue=Advance, Source={StaticResource Localisation}}" 
+                            Margin="10,10"
+                            Width="120"
+                            FontSize="17"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

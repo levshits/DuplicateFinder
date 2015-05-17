@@ -140,6 +140,10 @@
       <Project>{787af750-723d-41ca-bd12-110c6ac6ebc3}</Project>
       <Name>DuplicateFinder.MainMenu</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DuplicateFinder.Workplace\DuplicateFinder.Workplace.csproj">
+      <Project>{dc381a43-5e70-44f5-ae71-9ce09c720cdb}</Project>
+      <Name>DuplicateFinder.Workplace</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LocalizationInterfaces\LocalizationCommons.csproj">
       <Project>{23be18aa-c185-4826-b577-60f90ac4a684}</Project>
       <Name>LocalizationCommons</Name>

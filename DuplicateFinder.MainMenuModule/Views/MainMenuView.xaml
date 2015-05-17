@@ -12,10 +12,11 @@
     <Grid>
         <Menu IsMainMenu="True" VerticalAlignment="Top" Height="25" FontSize="12">
             <views:MenuItemWithRadioButton Header="{Binding Source={StaticResource Localization}, FallbackValue=Language, Mode=OneWay, Path=.[MainMenu.Language]}">
-                <MenuItem Header="Русский"/>
-                <MenuItem Header="English"/>
+                <MenuItem Header="Русский" Command="{Binding LanguageChangeCommand}" CommandParameter="ru"/>
+                <MenuItem Header="English" Command="{Binding LanguageChangeCommand}" CommandParameter="en"/>
             </views:MenuItemWithRadioButton>
-            <views:MenuItemWithRadioButton Header="{Binding Source={StaticResource Localization}, FallbackValue=ColorScheme, Mode=OneWay, Path=.[MainMenu.ColorScheme]}">
+            <views:MenuItemWithRadioButton Header="{Binding Source={StaticResource Localization}, FallbackValue=ColorScheme, Mode=OneWay, Path=.[MainMenu.ColorScheme]}"
+                                           ItemsSource="{Binding Themes}">
             </views:MenuItemWithRadioButton>
             <MenuItem Header="{Binding Source={StaticResource Localization}, FallbackValue=About, Mode=OneWay, Path=.[MainMenu.About]}"/>
         </Menu>
